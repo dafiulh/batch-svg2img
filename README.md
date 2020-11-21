@@ -1,6 +1,6 @@
 # batch-svg2img
 
-[svg2img](https://www.npmjs.com/package/svg2img) but use folder as source instead of file
+[svg2img](https://github.com/fuzhenn/node-svg2img) but use folder as source instead of file
 
 ```
 Usage
