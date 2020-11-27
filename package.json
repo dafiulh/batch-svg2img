@@ -1,6 +1,6 @@
 {
   "name": "batch-svg2img",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "svg2img but use folder as source instead of file",
   "main": "main.js",
   "repository": {
