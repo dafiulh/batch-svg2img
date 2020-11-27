@@ -1,14 +1,25 @@
 {
   "name": "batch-svg2img",
   "version": "1.0.0",
-  "description": "",
+  "description": "svg2img but use folder as source instead of file",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dafiulh/batch-svg2img.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dafiulh/batch-svg2img/issues"
+  },
+  "author": {
+    "name": "Dafiul Haq",
+    "email": "dafiulhaq97@gmail.com"
+  },
+  "homepage": "https://github.com/dafiulh/batch-svg2img#readme",
   "bin": {
     "batch-svg2img": "bin.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fast-glob": "^3.2.4",
     "meow": "^8.0.0",
