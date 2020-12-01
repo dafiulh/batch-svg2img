@@ -4,16 +4,16 @@ const meow = require("meow");
 const batchSvg2Img = require(".");
 
 const cli = meow(`
-    Usage
-    $ node ./bin.js src dest
+Usage:
+  $ npx batch-svg2img [source_folder] [dest_folder]
 
-    Arguments
-    --help, -h
-    --format, -f
-    --width
-    --height
-    --quality
-    --preserveAspectRatio
+Arguments:
+  -H, --help
+  -F, --format
+  --width
+  --height
+  --quality
+  --preserveAspectRatio
 `, {
     flags: {
         format: {
