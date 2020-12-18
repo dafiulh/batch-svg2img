@@ -1,12 +1,12 @@
-const path = require("path");
-const fs = require("fs");
-const fg = require("fast-glob");
-const mkdirp = require("mkdirp");
-const svg2img = require("svg2img");
+const path = require('path');
+const fs = require('fs');
+const fg = require('fast-glob');
+const mkdirp = require('mkdirp');
+const svg2img = require('svg2img');
 
 function batchSvg2Img(srcDir, destDir, options = {}) {
   const cwd = process.cwd();
-  const svgPattern = path.join(cwd, srcDir, "*.svg").replace(/\\/g, "/");
+  const svgPattern = path.join(cwd, srcDir, '*.svg').replace(/\\/g, '/');
 
   fg(svgPattern).then((entries) => {
     mkdirp.sync(path.join(cwd, destDir));
@@ -22,7 +22,7 @@ function batchSvg2Img(srcDir, destDir, options = {}) {
         const outputFilePath = path.join(cwd, destDir, outputFileName);
 
         console.log(`Writing "${outputFilePath}"`);
-        
+
         fs.writeFileSync(outputFilePath, buffer);
       });
     });

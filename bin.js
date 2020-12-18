@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 const argv = require('minimist')(process.argv.slice(2));
-const batchSvg2Img = require(".");
+const batchSvg2Img = require('.');
 
 function pickProperties(obj, props) {
-  let newObj = {};
+  const newObj = {};
 
   props.forEach((prop) => {
-    if (obj.hasOwnProperty(prop)) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       newObj[prop] = obj[prop];
     }
   });
@@ -32,17 +32,17 @@ Arguments:
   --preserveAspectRatio
   `);
 } else if (argv._.length === 0) {
-  console.error("Source folder not specified");
-} else if (argv.format && !["png", "jpg", "jpeg"].includes(argv.format)) {
-  console.error("Only 'png', 'jpg', and 'jpeg' format supported");
+  console.error('Source folder not specified');
+} else if (argv.format && !['png', 'jpg', 'jpeg'].includes(argv.format)) {
+  console.error('Only \'png\', \'jpg\', and \'jpeg\' format supported');
 } else {
   const src = argv._[0];
-  const dest = argv._[1] || "dest";
+  const dest = argv._[1] || 'dest';
 
-  argv.format = argv.format || "png";
+  argv.format = argv.format || 'png';
 
   batchSvg2Img(src, dest, pickProperties(
-    argv,
-    ["format", "width", "height", "quality", "preserveAspectRatio"]
+      argv,
+      ['format', 'width', 'height', 'quality', 'preserveAspectRatio']
   ));
 }
