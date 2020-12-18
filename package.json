@@ -2,7 +2,15 @@
   "name": "batch-svg2img",
   "version": "1.1.0",
   "description": "svg2img but use folder as source instead of file",
+  "keywords": [],
   "main": "main.js",
+  "bin": {
+    "batch-svg2img": "bin.js"
+  },
+  "files": [
+    "main.js",
+    "bin.js"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -20,10 +28,6 @@
     "email": "dafiulhaq97@gmail.com"
   },
   "homepage": "https://github.com/dafiulh/batch-svg2img#readme",
-  "bin": {
-    "batch-svg2img": "bin.js"
-  },
-  "keywords": [],
   "license": "MIT",
   "dependencies": {
     "minimist": "^1.2.5",
