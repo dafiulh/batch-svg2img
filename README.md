@@ -5,14 +5,14 @@
 [svg2img](https://www.npmjs.com/package/svg2img) but use folder as source instead of file
 
 ```
-Usage
-$ npx batch-svg2img src dest
+Usage:
+  $ npx batch-svg2img [source_folder] [dest_folder]
 
-Arguments
---help, -h
---format, -f
---width
---height
---quality
---preserveAspectRatio
+Arguments:
+  -h, --help
+  -f, --format
+  --width
+  --height
+  --quality
+  --preserveAspectRatio
 ```
